@@ -14,6 +14,17 @@
 >
 > **请勿在公开场合分享**，随时跑路
 
+> [!IMPORTANT]
+> ```
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+> FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+> IN THE SOFTWARE.
+> ```
+
 基于 ReVanced 实现的B站 Android 客户端增强模块。模块设置完美融入 APP 设置，功能丰富，自定义程度高。
 得益于实现方式，对 APP 性能几乎没有影响，流畅、迅速、启动快。支持粉版、Play 版及 HD 版。
 
@@ -46,7 +57,6 @@ cd BiliRoamingM
 
 ## ⬇️ 下载使用
 
-- 前往 [BiliRoamingM-PreBuilds Release](https://github.com/sakarie9/BiliRoamingM-PreBuilds/releases/latest) 下载
 - 参照 [revanced-cli](https://github.com/ReVanced/revanced-cli/tree/main/docs) 文档打包
   1. 下载定制版 [revanced-cli.jar](https://github.com/zjns/revanced-cli/releases/latest)
   2. 从 [releases](https://github.com/sakarie9/BiliRoamingM/releases/latest) 下载 `integrations.apk` 和 `patches.jar`
