@@ -5,7 +5,7 @@
 </div>
 
 > [!IMPORTANT]  
-> 基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX)，去除番剧解锁等功能
+> 基于 [BiliRoamingX](https://github.com/BiliRoamingX/BiliRoamingX)，去除番剧解锁、大会员画质试用等功能
 >
 > 此 Fork 针对 Play 版本测试，仅进行维护性更新。
 

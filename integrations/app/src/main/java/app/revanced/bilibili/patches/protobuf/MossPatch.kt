@@ -155,30 +155,8 @@ object MossPatch {
     @Keep
     @JvmStatic
     fun hookBeforeRequest(url: String, headers: ArrayList<Map.Entry<String, String>>): String {
-        if (url.endsWith(PLAY_VIEW_UNITE_API)) {
-            if ((Utils.isPink() || Utils.isPlay()) && Settings.TrialVipQuality() && !Accounts.isEffectiveVip)
-                pinNetworkType(NetworkType.WIFI, headers)
-        }
         if (url.endsWith(PLAY_VIEW_UNITE_API))
             headers["authorization"] = "identify_v1 ${getFinalAccessKey(false)}"
         return url
-    }
-
-    @Suppress("SameParameterValue")
-    private fun pinNetworkType(type: NetworkType, headers: ArrayList<Map.Entry<String, String>>) {
-        val networkBinKey = "x-bili-network-bin"
-        val networkBinValue = headers.find { it.key == networkBinKey }?.value
-        if (!networkBinValue.isNullOrEmpty()) {
-            val newNetworkBin = Network.parseFrom(networkBinValue.base64Decode).apply {
-                this.type = type
-            }.toByteArray().base64
-            headers[networkBinKey] = newNetworkBin
-        }
-    }
-
-    @Suppress("SameParameterValue")
-    private fun fakeClient(client: Client, headers: ArrayList<Map.Entry<String, String>>) {
-        headers["x-bili-metadata-bin"] = grpcMetadataHeader(client)
-        headers["x-bili-device-bin"] = grpcDeviceHeader(client)
     }
 }
