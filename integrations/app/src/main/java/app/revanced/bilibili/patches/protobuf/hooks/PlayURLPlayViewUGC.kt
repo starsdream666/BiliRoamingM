@@ -1,7 +1,9 @@
 package app.revanced.bilibili.patches.protobuf.hooks
 
 import android.content.pm.ActivityInfo
+import app.revanced.bilibili.account.Accounts
 import app.revanced.bilibili.meta.VideoInfo
+import app.revanced.bilibili.patches.TrialQualityPatch
 import app.revanced.bilibili.patches.VideoQualityPatch
 import app.revanced.bilibili.patches.main.ApplicationDelegate
 import app.revanced.bilibili.patches.main.VideoInfoHolder
@@ -53,6 +55,9 @@ object PlayURLPlayViewUGC : MossHook<PlayViewReq, PlayViewReply>() {
                     }
                 }
             }
+            if (req.download < 1 && !Accounts.isEffectiveVip
+                && Settings.TrialVipQuality()
+            ) TrialQualityPatch.makeVipFree(reply)
             if (Utils.isHd() && Settings.NotLockOrientation()) {
                 val dashVideo = reply.videoInfo.streamListList.firstNotNullOfOrNull {
                     if (it.hasDashVideo()) it.dashVideo else null
