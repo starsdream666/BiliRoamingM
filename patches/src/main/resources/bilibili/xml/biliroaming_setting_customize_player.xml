@@ -135,6 +135,10 @@
         android:layout="@layout/bili_app_layout_preference_category_title"
         android:title="@string/biliroaming_unstable_feature_title">
         <androidx.preference.SwitchPreferenceCompat
+            android:key="trial_vip_quality"
+            android:summary="@string/biliroaming_trial_vip_quality_summary"
+            android:title="@string/biliroaming_trial_vip_quality_title" />
+        <androidx.preference.SwitchPreferenceCompat
             android:key="force_hw_codec"
             android:summary="@string/biliroaming_force_hw_codec_summary"
             android:title="@string/biliroaming_force_hw_codec_title" />
